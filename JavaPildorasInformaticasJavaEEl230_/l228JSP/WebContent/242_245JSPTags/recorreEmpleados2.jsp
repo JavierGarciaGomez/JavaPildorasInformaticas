@@ -48,13 +48,15 @@ pageContext.setAttribute("losEmpleados", datos);
 				<td>${EmpTemp.apellido}</td>
 				<td>${EmpTemp.puesto}</td>
 				<td><c:choose>
-						<c:when test="${EmpTemp.salario<40000}">
+						<c:when test="${EmpTemp.salario<40000} ">
+						${EmpTemp.salario+5000}
+						<c:when test="${EmpTemp.salario<40000 && EmpTemp.salario<=50000}">
 						${EmpTemp.salario+5000}
 						</c:when>
 						<c:otherwise>
 						${EmpTemp.salario}
 						</c:otherwise>
-						
+
 					</c:choose></td>
 
 
